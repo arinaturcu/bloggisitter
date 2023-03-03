@@ -1,0 +1,18 @@
+{
+    "name": "themeisle/bloggisitter",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "classmap": ["inc/"]
+    },
+    "authors": [
+        {
+            "name": "arinaturcu",
+            "email": "arina@themeisle.com"
+        },
+        {
+            "name": "andreearadacina",
+            "email": "andreea.radacina@themeisle.com"
+        }
+    ],
+    "require": {}
+}
