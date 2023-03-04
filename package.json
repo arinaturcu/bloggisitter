@@ -1,0 +1,44 @@
+{
+  "name": "bloggisitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "start": "wp-scripts start --config webpack.config.js",
+    "build": "wp-scripts build --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arinaturcu/bloggisitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arinaturcu/bloggisitter/issues"
+  },
+  "homepage": "https://github.com/arinaturcu/bloggisitter#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@wordpress/block-editor": "^11.5.0",
+    "@wordpress/components": "^23.5.0",
+    "@wordpress/dom-ready": "^3.28.0",
+    "@wordpress/edit-post": "^7.5.0",
+    "@wordpress/element": "^5.5.0",
+    "@wordpress/i18n": "^4.28.0",
+    "@wordpress/plugins": "^5.5.0",
+    "@wordpress/primitives": "^3.26.0",
+    "@wordpress/scripts": "^25.5.0",
+    "babel-loader": "^9.1.2",
+    "lodash": "^4.17.21",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

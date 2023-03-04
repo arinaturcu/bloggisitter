@@ -1,0 +1,29 @@
+button[aria-label="Bloggisitter"].is-pressed svg path {
+  stroke: #fff;
+}
+
+.bloggisitter-buttons {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bloggisitter-settings-panel {
+  .components-tools-panel-item:not( .is-first ) {
+    border-top: 1px solid #ededed;
+    padding-top: 12px;
+  }
+
+  .bloggisitter-excerpt-length {
+    margin-top: 5px !important;
+
+    .components-number-control {
+      display: inline-flex;
+      margin: 0 5px;
+
+      input {
+        width: 50px !important;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ License: GPLv2 or later
 use ThemeIsle\Bloggisitter\Main;
 
 define( 'BLOGGISITTER_PATH', dirname( __FILE__ ) );
+define( 'BLOGGISITTER_URL', plugins_url( '/', __FILE__ ) );
 
 $vendor_file = BLOGGISITTER_PATH . '/vendor/autoload.php';
 
