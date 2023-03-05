@@ -21,8 +21,21 @@ class Main {
 	 * @since   1.0.0
 	 * @access  public
 	 */
-	public function init() {
+	public function init(): void {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
+		add_action( 'init', array( $this, 'register_openAI_setting' ) );
+	}
+
+	public function register_openAI_setting(): void {
+		register_setting(
+			'bloggisitter_settings',
+			'openai_key',
+			[
+				'type'         => 'string',
+				'show_in_rest' => true,
+				'default'      => '',
+			]
+		);
 	}
 
 	public function enqueue_block_editor_assets(): void {
@@ -51,12 +64,6 @@ class Main {
 			$asset_file_css['dependencies'],
 			$asset_file_css['version']
 		);
-
-//		wp_enqueue_style(
-//			'bloggisitter-style',
-//			BLOGGISITTER_URL . 'build/editor-css.css',
-//			array( 'wp-edit-blocks', 'font-awesome-5', 'font-awesome-4-shims' ),
-//			$asset_file['version'] );
 	}
 
 	/**

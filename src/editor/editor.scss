@@ -5,25 +5,92 @@ button[aria-label="Bloggisitter"].is-pressed svg path {
 .bloggisitter-buttons {
   margin-top: 5px;
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
+
+  button {
+    margin-top: 10px;
+  }
 }
 
 .bloggisitter-settings-panel {
+  .bloggisitter-generate {
+    margin-top: 10px;
+  }
+
+  &__openai-key {
+    grid-column: span 2;
+    display: flex;
+    gap: 5px;
+
+    &-clear {
+      margin-bottom: 8px;
+      margin-top: auto;
+      height: 30px;
+    }
+  }
+
+  .help {
+    margin-top: 8px;
+    font-size: 12px;
+    font-style: normal;
+    color: rgb(117, 117, 117);
+    margin-bottom: revert;
+  }
+
   .components-tools-panel-item:not( .is-first ) {
     border-top: 1px solid #ededed;
     padding-top: 12px;
   }
 
-  .bloggisitter-excerpt-length {
-    margin-top: 5px !important;
+  .label {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    padding: 0;
+  }
 
-    .components-number-control {
-      display: inline-flex;
-      margin: 0 5px;
+  .bloggisitter-card {
+    background-color: #f0f0f1;
+    padding: 10px 15px;
+    border-radius: 4px;
+    position: relative;
+    overflow-y: scroll;
 
-      input {
-        width: 50px !important;
-      }
+    &.image-placeholder {
+      padding: 0;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    &.has-image {
+      padding: 0;
+    }
+
+    &.active:not(.has-image) {
+      padding: 10px 15px 22px 15px;
+    }
+
+    &.active:hover {
+      background-color: #d2d2d3;
+    }
+
+    .bloggisitter-card-text {
+      margin: 0;
+    }
+
+    .bloggisitter-card-copy {
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      opacity: .5;
+    }
+  }
+
+  .bloggisitter-excerpt-length {
+    margin-bottom: 10px;
   }
 }
