@@ -37,7 +37,6 @@ const Excerpt = ( { content, openAIKey } ) => {
 				generate={ generateExcerpt }
 				loading={ loading }
 			>
-				<br />
 				<NumberControl
 					label={ __( 'Excerpt Max Length', 'bloggisitter' ) }
 					isShiftStepEnabled={ true }

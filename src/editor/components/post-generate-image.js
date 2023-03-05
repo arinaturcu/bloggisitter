@@ -53,6 +53,7 @@ const PostGenerateImage = ( {
 					icon={ MagicWand }
 					onClick={ generate }
 					isBusy={ loading }
+					disabled={ loading }
 					className="bloggisitter-generate"
 				>
 					{ __( 'Generate', 'bloggisitter' ) }

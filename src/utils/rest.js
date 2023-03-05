@@ -31,7 +31,6 @@ export const saveToMediaLibrary = async ( image ) => {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
-			'Content-Type': 'image/png',
 			'x-wp-nonce': bloggisitter.nonce,
 			'Content-Disposition': `attachment; filename=${ fileName }`,
 		},
@@ -44,7 +43,7 @@ export const saveToMediaLibrary = async ( image ) => {
 		type: 'image/png',
 	} );
 
-	options.body = JSON.stringify( { data: formData } );
+	options.body = formData;
 
 	return await fetch( bloggisitter.root + 'wp/v2/media', options ).then(
 		( response ) => {
